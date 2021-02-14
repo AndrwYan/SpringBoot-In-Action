@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    name: mysql
+    url: jdbc:mysql://localhost:3306/springbootdb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select count(1) from 'table'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: false
+    maxOpenPreparedStatements: -1
+
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
+    type-aliases-package: com.spring.demo.springbootexample.mybatis.po
+
+server:
+  port: 8081
+
