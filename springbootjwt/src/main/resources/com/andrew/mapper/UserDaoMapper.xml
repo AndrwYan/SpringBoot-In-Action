@@ -1,0 +1,5 @@
+<mapper xmlns="http://mybatis.org/schema/mybatis-mapper">
+    <select id="login" parameterMap="User" resultType="User">
+        select * from user where name=#{name} and password=#{password
+    </select>
+</mapper>

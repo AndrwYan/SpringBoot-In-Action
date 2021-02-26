@@ -1,0 +1,25 @@
+
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    name: mysql
+    url: jdbc:mysql://localhost:3306/springbootdb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.util.DriverDataSource
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update   #如果启动时，表格式不一致则更新表，原有数据保留
+    properties:
+      hibernate:
+        format_sql: true
+
+
+
+
